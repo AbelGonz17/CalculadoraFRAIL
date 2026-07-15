@@ -7,15 +7,15 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Print Services Manager',
+      title: 'Calculadora FRAIL - Dra. Laura E. López',
       meta: [
         {
           name: 'description',
-          content: 'Print Services Manager'
+          content: 'Calculadora clínica para evaluar la fragilidad mediante la escala FRAIL.'
         }
       ],
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/icon2.ico' }
+        { rel: 'icon', type: 'image/jpeg', href: '/img/logo-icon.jpg' }
       ]
     }
   },

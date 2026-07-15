@@ -6,8 +6,8 @@ import type { ProjectConfig } from './types/config'
  */
 export const projectConfig: ProjectConfig = {
   // Project Identity
-  name: 'NOMBRE DEL SISTEMA',
-  description: 'Template',
+  name: 'Calculadora FRAIL',
+  description: 'Calculadora de Escala FRAIL',
   logo: '/img/logo-icon.jpg',      // Path to your logo (e.g., /logo.png)
   defaultLogo: '/img/logo-icon.jpg', // Fallback logo if the path above is not found
   
