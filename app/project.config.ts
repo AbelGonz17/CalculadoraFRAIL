@@ -8,8 +8,8 @@ export const projectConfig: ProjectConfig = {
   // Project Identity
   name: 'NOMBRE DEL SISTEMA',
   description: 'Template',
-  logo: '/icon2.ico',      // Path to your logo (e.g., /logo.png)
-  defaultLogo: '/icon2.ico', // Fallback logo if the path above is not found
+  logo: '/img/logo-icon.jpg',      // Path to your logo (e.g., /logo.png)
+  defaultLogo: '/img/logo-icon.jpg', // Fallback logo if the path above is not found
   
   // Theme & Appearance
   theme: {
