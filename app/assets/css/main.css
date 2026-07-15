@@ -73,7 +73,7 @@ html, body {
 .dash-shell {
   display: flex;
   min-height: 100vh;
-  background: var(--surface-0);
+  background-color: #F4F6F7 !important;
 }
 
 /* ── Sidebar ──────────────────────────────────────────── */

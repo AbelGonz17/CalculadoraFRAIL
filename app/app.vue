@@ -69,9 +69,7 @@ useHead({
       innerHTML: `
 (function () {
   function getTheme() {
-    const match = document.cookie.match(/theme=(dark|light)/);
-    if (match) return match[1];
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'light';
   }
 
   const theme = getTheme();
