@@ -1,6 +1,8 @@
-import { useAuthStore } from '~/stores/auth'
+// import { useAuthStore } from '~/stores/auth'
 
 export default defineNuxtRouteMiddleware((to) => {
+  // Login flow disabled temporarily
+  /*
   const authStore = useAuthStore()
 
   // Use a direct cookie check as fallback for the middleware
@@ -16,4 +18,5 @@ export default defineNuxtRouteMiddleware((to) => {
   if (isActuallyLoggedIn && to.path === '/login') {
     return navigateTo('/')
   }
+  */
 })

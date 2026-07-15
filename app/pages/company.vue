@@ -147,22 +147,24 @@ const statusMenuItems = () => [
                 <td>
                   {{ item?.companyRNC ?? '-' }}
                 </td>
-                <span
-                  class="badge flex items-center"
-                  :class="getStatusClass(item.statusId)"
-                >
+                <td>
                   <span
-                    style="
-                      width: 5px;
-                      height: 5px;
-                      border-radius: 50%;
-                      display: inline-block;
-                      margin-right: 4px;
-                      background: currentColor;
-                    "
-                  />
-                  {{ item.statusId ? 'Activo' :'Desactivado' }}
-                </span>
+                    class="badge flex items-center"
+                    :class="getStatusClass(item.statusId)"
+                  >
+                    <span
+                      style="
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        margin-right: 4px;
+                        background: currentColor;
+                      "
+                    />
+                    {{ item.statusId ? 'Activo' :'Desactivado' }}
+                  </span>
+                </td>
                 <!-- <td>
                 <span
                   class="badge"

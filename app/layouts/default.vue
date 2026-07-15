@@ -1,6 +1,7 @@
 <template>
   <div class="dash-shell">
-    <!-- Sidebar -->
+    <!-- Sidebar (Deshabilitado temporalmente) -->
+    <template v-if="false">
     <aside
       class="dash-sidebar"
       :class="{ collapsed: isSidebarCollapsed }"
@@ -138,75 +139,26 @@
         </div>
       </div>
     </aside>
+    </template>
 
     <!-- Main Area -->
     <div
-      class="dash-main"
+      class="dash-main p-0"
       :class="{ collapsed: isSidebarCollapsed }"
+      :style="{ marginLeft: '0px', padding: '0px' }"
     >
-      <!-- Top Bar -->
-      <header class="dash-topbar">
-        <div class="flex items-center gap-4">
-          <button
-            class="dash-topbar__icon-btn"
-            title="Contraer/Expandir Menú"
-            @click="isSidebarCollapsed = !isSidebarCollapsed"
-          >
-            <UIcon
-              name="i-heroicons-bars-3"
-              style="width:20px;height:20px"
-            />
-          </button>
-          <div class="dash-topbar__breadcrumb">
-            Sistema / <span>{{ currentPageName }}</span>
-          </div>
+      <!-- Premium Hero Header -->
+      <header class="bg-white border-t-[6px] border-[#F39C12] pt-4 pb-6 px-4 relative flex flex-col items-center justify-center text-center shadow-sm z-10">
+        <!-- Logo -->
+        <div class="mb-3 mt-1 w-full max-w-[190px] mx-auto">
+          <img src="/img/logo-vertical.jpg" alt="Dra. Laura E. López - Geriatra Internista" class="w-full h-auto mix-blend-multiply" />
         </div>
-        <div class="dash-topbar__actions">
-          <!-- Theme Toggle -->
-          <button
-            class="dash-topbar__icon-btn theme-toggle"
-            :title="theme === 'dark' ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'"
-            @click="toggleTheme"
-          >
-            <Transition
-              name="theme-icon"
-              mode="out-in"
-            >
-              <UIcon
-                v-if="theme === 'dark'"
-                key="sun"
-                name="i-heroicons-sun"
-                style="width:16px;height:16px"
-              />
-              <UIcon
-                v-else
-                key="moon"
-                name="i-heroicons-moon"
-                style="width:16px;height:16px"
-              />
-            </Transition>
-          </button>
+        
+        <div class="w-12 h-[3px] bg-slate-100 rounded-full mb-3"></div>
 
-          <button
-            class="dash-topbar__icon-btn"
-            title="Notificaciones"
-          >
-            <UIcon
-              name="i-heroicons-bell"
-              style="width:16px;height:16px"
-            />
-          </button>
-          <button
-            v-if="ability.can('manage', 'all')"
-            class="dash-topbar__icon-btn"
-            title="Configuración"
-          >
-            <UIcon
-              name="i-heroicons-cog-6-tooth"
-              style="width:16px;height:16px"
-            />
-          </button>
-        </div>
+        <h1 class="text-[28px] sm:text-3xl font-black text-[#2C3E50] tracking-tight leading-[1.1]">
+          Calculadora <br/> <span class="text-[#F39C12]">FRAIL</span>
+        </h1>
       </header>
 
       <!-- Page Content -->
